@@ -11,20 +11,21 @@
 </head>
 
 <body>
-    <h1>Welcome!</h1>
+    <div id="webchat">
+        <h1>Welcome!</h1>
+        <div class="container">
+            <div class="userName"></div>
+            <div class="messageText"></div>
+        </div>
+    </div>
+    <div class="userInputContainer">
+        <input type="text" class="userInput" placeholder="Unesi poruku...">
+        <button onclick="sandData()">Pošalji</button>
+    </div>
     <!-- 
-    <div class="brojcClanoca"></div>
-    <div class="listaClanova"></div>
-    <div class="poruka"></div>
-    <form class="formaPoruke">
-        <input class="formaPoruke__input" placeholder="Napišite poruku.." type="text" />
-        <input class="formaPoruke__button" value="Pošalji" type="submit" />
-    </form>
- -->
-
     <label for="text" id="text" name="text"></label>
     <input type="text" id="faj">
-    <button onclick="sandData()">Pošalji</button>
+    <button onclick="sandData()">Pošalji</button> -->
 
     <script src="script.js"></script>
 </body>
