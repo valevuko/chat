@@ -1,33 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
-    <title>Web Chat</title>
+    <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+    <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 13px;
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .members-count,
+        .members-list,
+        .messages {
+            border: 1px solid #e4e4e4;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .messages {
+            flex-shrink: 1;
+            overflow: auto;
+        }
+
+        .message {
+            padding: 5px 0;
+        }
+
+        .message .member {
+            display: inline-block;
+        }
+
+        .member {
+            padding-right: 10px;
+            position: relative;
+        }
+
+        .message-form {
+            display: flex;
+            flex-shrink: 0;
+        }
+
+        .message-form__input {
+            flex-grow: 1;
+            border: 1px solid #dfdfdf;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .message-form__button {
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="webchat">
-        <h1>Welcome!</h1>
-        <div class="container">
-            <div class="userName"></div>
-            <div class="messageText"></div>
-        </div>
-    </div>
-    <div class="userInputContainer">
-        <input type="text" class="userInput" placeholder="Unesi poruku...">
-        <button onclick="sandData()">Pošalji</button>
-    </div>
-    <!-- 
-    <label for="text" id="text" name="text"></label>
-    <input type="text" id="faj">
-    <button onclick="sandData()">Pošalji</button> -->
-
-    <script src="script.js"></script>
+    <div class="members-count">-</div>
+    <div class="members-list">-</div>
+    <div class="messages"></div>
+    <form class="message-form" onsubmit="return false;">
+        <input class="message-form__input" placeholder="Type a message.." type="text" />
+        <input class="message-form__button" value="Send" type="submit" />
+    </form>
+    <script src="./script.js"></script>
 </body>
 
 </html>
