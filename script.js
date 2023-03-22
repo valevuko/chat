@@ -37,6 +37,7 @@ drone.on('open', error => {
   room.on('members', m => {
     members = m;
     updateMembersDOM();
+    updateRoomNameDOM();
   });
 
 
@@ -54,7 +55,9 @@ drone.on('open', error => {
 
   room.on('data', (text, member) => {
     if (member) {
+      console.log(member)
       addMessageToListDOM(text, member);
+
     } else {
       // Message is from server
     }
@@ -87,6 +90,9 @@ function updateMembersDOM() {
   );
 }
 
+function updateRoomNameDOM() {
+  DOM.roomName.innerText = `Welcome to chat ${roomName}!`;
+}
 //------------- DOM STUFF
 
 const DOM = {
@@ -95,6 +101,7 @@ const DOM = {
   messages: document.querySelector('.messages'),
   input: document.querySelector('.message-form__input'),
   form: document.querySelector('.message-form'),
+  roomName: document.querySelector('.room-name')
 };
 
 DOM.form.addEventListener('submit', sendMessage);
