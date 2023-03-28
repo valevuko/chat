@@ -3,7 +3,6 @@
 
 <head>
     <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
-    <!--<script type='text/javascript' src='http://0.0.0.0:8080/scaledrone.js'></script>-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
@@ -17,17 +16,19 @@
             <div class="col-4" id="sidebar">
                 <div>
                     <h6 class="room-name">-</h6>
+                    <hr>
                     <div class="members-count">-</div>
                 </div>
 
                 <div>
                     <h6>Members:</h6>
+                    <hr>
                     <div class="members-list">-</div>
                 </div>
             </div>
             <div class="col-8">
                 <div>
-                    <div class="messages"></div>
+                    <div class="messages"><br></div><br>
                     <form class="message-form" onsubmit="return false;">
                         <input class="message-form__input" placeholder="Type a message.." type="text" />
                         <input class="message-form__button" value="Send" type="submit" />

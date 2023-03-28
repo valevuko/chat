@@ -12,6 +12,7 @@ body {
 .members-list{
   padding: 5px;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .messages {
@@ -19,22 +20,28 @@ body {
   margin-bottom: 15px;
   flex-shrink: 1;
   overflow-y: scroll;
-  border: 1px solid #c5c0c0;
-  background-color: lemonchiffon;
+  border: 1px solid #bfcdcb;
+  background-image:  url("slika1.png");
   height: 500px;
 }
 
 #sidebar {
   border: 1px solid #c5c0c0;
+/*   background-color: rgba(219, 184, 163, 0.61);
+ */
+ background-image:  url("download .jpg");
+ background-size: cover;
+
 }
 .message {
   padding: 5px 0;
+
+
 }
 
 .message .member {
   display: inline-block;
 }
-
 .member {
   padding-right: 10px;
   position: relative;
@@ -56,4 +63,6 @@ body {
 .message-form__button {
   margin: 10px;
   border-radius: 20px;
+  background-color: #5a6e6f;
 }
+
